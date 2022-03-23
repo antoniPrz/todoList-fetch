@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+/* ===================== RESET ==========================*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{ 
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input{
+  border: 0
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul{
+  list-style:none;
+}
+
+p{
+  font-family: raleway, serif;
+  font-weight: 300;
+
+}
+
+h1{
+  font-family: OpenSans, sans-serif;
+  font-weight: 300;
+  color: pink;
+  margin-bottom: 2rem;
+  font-size:4.2rem;
+}
+
+body{
+  background-color:white;
+  font-family: raleway, serif;
+  font-weight: 300;
+}
+
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color:whitesmoke;
+  height: 42rem;
+  width: 34rem;
+  margin-top: 10rem ;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.list-container{
+display: flex;
+flex-direction: column;
+background-color:white;
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tasks-container{
+  background-color:white;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+li , input {
+  background-color: white;
+  border-bottom: 1px solid black;
+  height:4rem; 
+  width: 28rem;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  
+}
+
+span{
+  color:red;
+  opacity:0;
+}
+
+li:hover span{
+  opacity: 1;
 }
