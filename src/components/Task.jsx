@@ -7,7 +7,7 @@ export function Task({ setTasksList, tasksList, updateTasks }) {
 
   const addTask = (e) => {
     e.preventDefault();
-    const newTaskList = tasksList.concat({ label: newTask, done: false });
+    const newTaskList = [...tasksList, { label: newTask, done: false }];
     setTasksList(newTaskList)
     updateTasks();
     setNewTask('');
