@@ -38,6 +38,25 @@ export function TaskList() {
     updateTasks();
   }
 
+  const clearTasksList = () => {
+    fetch(URL, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify([{
+        "label": "tarea de ejemplo puede eliminar",
+        "done": false
+      }])
+    })
+
+      .then(() => toGetTasksFromApi())
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error))
+
+
+
+  }
+
   return (
     <>
       <Task setTasksList={setTasksList} tasksList={tasksList} updateTasks={updateTasks} />
@@ -52,7 +71,14 @@ export function TaskList() {
             </li>
           )}
         </ul>
-        <p>{tasksList.length} item left</p>
+        <div>
+          <p>{tasksList.length} items left</p>
+          <button
+            type="button"
+            onClick={() => clearTasksList()}
+
+          >Clear List</button>
+        </div>
       </div>
 
     </>

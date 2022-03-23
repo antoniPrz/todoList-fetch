@@ -4,8 +4,8 @@ to do
 [X] Reciclar codigo de primera todolist 
 [x] Hacer llamada de tareas a Api
 [x] Mostrar las tareas que llegan del Api
-[] Agregar tareas mediante Metodo put
-[] Eliminar tareas mediante metodo delete 
-[] Eliminar la lista completa mediante un boton
+[x] Agregar tareas mediante Metodo PUT
+[x] Eliminar tareas mediante metodo PUT 
+[x] Eliminar la lista completa mediante un boton
 [] Estilizar los componentes
 [] Refactor
